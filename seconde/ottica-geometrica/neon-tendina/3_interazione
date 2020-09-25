@@ -1,0 +1,82 @@
+int Ox = 50;
+int factor = 25;
+H = 10;
+Hy = H * factor;
+L = 6;
+Lx = L * factor;
+h = 9;
+hy = h * factor;
+l = 5;
+lx = l * factor;
+RFact1 = 20;
+RFact2 = 20;
+ 
+ 
+void setup() { 
+ 
+    // dimensione finestra
+    size(700, 400);
+ 
+    // sfondo finestra bianco
+    background(255);
+  
+ 
+ 
+    strokeWeight(4); // spessore linea
+    line(Ox,350,670,350);
+ 
+    line(Ox,50,Ox,350);
+ 
+    // neon
+    strokeWeight(6); // spessore linea
+    stroke(255, 51, 153); // colore linea
+    line(Ox, 350 - Hy, Ox + Lx, 350 - Hy); 
+ 
+ 
+    // tendina
+    stroke(0, 0, 204); // colore linea
+    line(Ox, 350 - hy, Ox + lx, 350 - hy); 
+ 
+ 
+ 
+     
+}
+ 
+void draw() {
+    
+    background(255);
+ 
+    stroke(0);
+    strokeWeight(4); // spessore linea
+    line(Ox,350,670,350);
+    line(Ox,50,Ox,350);
+ 
+    // neon
+    strokeWeight(6); // spessore linea
+    stroke(255, 51, 153); // colore linea
+    line(Ox, 350 - Hy, Ox + Lx, 350 - Hy); 
+ 
+    // tendina
+    stroke(0, 0, 204); // colore linea
+    line(Ox, mouseY, Ox + lx, mouseY); 
+ 
+    
+    //h = h - 0.003;
+    h = (350 - mouseY) / factor;
+    hy = h * factor;
+ 
+ 
+    // raggio 1
+    stroke(101, 204, 0); // colore linea
+    R1x = RFact1 * (lx - Lx);
+    R1y = RFact1 * (Hy - hy);
+    line(Ox + Lx, 350 - Hy, Ox + lx + R1x, mouseY + R1y);
+
+
+    // raggio 2
+    stroke(101, 204, 0); // colore linea
+    R2x = RFact2 * lx;
+    R2y = RFact2 * (Hy - hy);
+    line(Ox, 350 - Hy, Ox + lx + R2x, mouseY + R2y);
+
+}
