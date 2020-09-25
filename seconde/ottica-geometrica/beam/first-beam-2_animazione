@@ -1,0 +1,26 @@
+x = 100;
+y = 100;
+flag = 0;
+
+void setup() { 
+    size(700, 400); 
+    background(255);
+   
+    strokeWeight(3);
+    ellipse(x, y, 2, 2);
+    
+} 
+
+void draw() { 
+
+    x = x + 1;
+    if (y < height && flag == 0) {
+        y = y + 1;
+    } else {
+        y = y -1;
+        flag = 1;
+    }
+    ellipse(x, y, 2, 2);
+
+}
+
