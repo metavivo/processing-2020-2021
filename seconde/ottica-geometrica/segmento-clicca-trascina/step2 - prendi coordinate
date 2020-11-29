@@ -1,0 +1,26 @@
+int x1, x2, y1, y2;
+ 
+void setup() { 
+    size(700,400);
+    background(255);    
+    fill(0);    
+} 
+ 
+void draw() { 
+}
+ 
+ 
+void mousePressed() {
+    x1 = mouseX;
+    y1 = mouseY;
+    ellipse (x1, y1, 5, 5);
+}
+ 
+ 
+void mouseReleased() {
+    x2 = mouseX;
+    y2 = mouseY;
+    ellipse (x2, y2, 4, 4);
+}
+ 
+ 
