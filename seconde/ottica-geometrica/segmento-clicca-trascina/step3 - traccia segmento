@@ -1,0 +1,23 @@
+int x1, x2, y1, y2;
+ 
+void setup() { 
+    size(700,400);
+    background(255);    
+    fill(0);    
+} 
+ 
+void draw() { 
+}
+ 
+ 
+void mousePressed() {
+    x1 = mouseX;
+    y1 = mouseY;
+}
+ 
+ 
+void mouseReleased() {
+    x2 = mouseX;
+    y2 = mouseY;
+    line(x1, y1, x2, y2);
+}
